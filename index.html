@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+	  <title>Ryan Weideman's Website</title>
+    <meta name="description" content="The personal website of Ryan Weideman, a software engineer living in Palo Alto, CA.">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/icon.png">
+  </head>
+
+  <body>
+    <div id="container">
+        <div id="content">
+            <img src="images/footer.JPG" width=100%/>
+            <h1 style="margin: 10px 0px;">Hello! I'm Ryan Weideman.</h1>
+
+            <a href="https://www.linkedin.com/in/ryan-weideman" target="_blank">
+                <img src="images/linkedin.png" width=35px/>
+            </a>
+            <a href="https://github.com/ryanweideman" target="_blank" style="margin:0px 15px">
+                <img src="images/github.png" width=35px/>
+            </a>
+
+            <hr/>
+            <img id="profile_picture" src="images/ryan.jpg"/>
+
+
+            <div class="about_me">
+                <h2>About</h2>
+                <p>
+                I'm a Software Engineer, most recently working at <a href="https://www.amazon.jobs/en/teams/lab126?cmpid=EPLIDS200680B" target="_blank">Amazon Lab126</a>,
+              Amazon's R&D focused consumer electronics division. I worked on Amazon first home robot, <a href="https://www.youtube.com/watch?v=sj1t3msy8dc" target="_blank">Amazon Astro</a>. I was the primary owner of head, body, and autonomous docking control software that executes billions of times a day across the fleet of customer robots. I recently left Amazon to try something different: exploring exciting opportunities at startups.
+                </p>
+
+                <p>
+                I'm experienced at software and product development, robotics systems, embedded systems, computer vision, deep learning, and computer graphics. I consider myself a generalist - I am curious and interested in most things, and I'm always looking to expand my technical and non-technical breadth.
+                </p>
+
+                <p>
+                I attended university at Cal Poly in San Luis Obispo, attaining B.S. and M.S. degrees in Computer and Electrical engineering, respectively.
+                During my time at university I did two software engineering internships at Amazon Lab126. I was also an incoming student orientation leader and a member of the robotics club.
+                </p>
+
+                <p>
+                In my free time I like to experiment with cooking new foods, rock climbing, and running.
+                </p>
+
+                <p>
+                I can be contacted on <a href="https://www.linkedin.com/in/ryan-weideman" target="_blank"> LinkedIn </a>.
+                </p>
+
+
+                <hr style="clear: both"/>
+            </div>
+
+            <div id="portfolio">
+
+                <h2>Portfolio</h2>
+
+                <hr class="dashed_break"/>
+
+                <div class="row">
+                      <h3>Amazon Astro</h3>
+                      <div class="left_media_container">
+                          <div class="video_container">
+                              <iframe class="video" src="https://www.youtube.com/embed/sj1t3msy8dc" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                      </div>
+                      <p>I worked on Astro, joining the program early in its development through to the product's public launch and first customer ship.</p>
+                      <p>My team was responsible for developing the software that controls the motion of the robot's head and body, and the behavior of the robot. Essentially anytime the robot moves, I can point and say "That's my code!"</p>
+                      <p class=main_technologies>Main Technologies: C/C++, Python, Robot Operating System (ROS), MATLAB, Docker, Git</p>
+                </div>
+                <hr class="dashed_break"/>
+
+
+                <div class="row">
+                      <h3>Robot Navigation in Cluttered Environments with Deep Reinforcement Learning</h3>
+                      <div class="right_media_container">
+                          <video width="100%" controls>
+                              <source src="images/thesis_demo.mp4" type="video/mp4">
+                          </video>
+                      </div>
+                      <p>
+                      The aim of this project, my master's thesis research, was to apply deep reinforcement learning to enable a mobile robot to navigate a cluttered room using cheap and accessible camera sensors. The video to the right is a demo of what the robot sees and it successfully avoiding obstacles.
+                      </p>
+                      <p>
+                      I experimented with extending <a href="https://arxiv.org/abs/1706.09829" target="_blank">this model</a> so that the robot could learn to navigate toward a target position while avoiding obstacles. I leveraged AWS to accelerate simulation and model training, and analyzed data to show that the my extended model worked to succesfully navigate different cluttered environments. The work is published <a href="https://digitalcommons.calpoly.edu/theses/2011/" target="_blank">here</a>.
+                      </p>
+                      <p class=main_technologies>Main Technologies: Python, AWS EC2, MATLAB, Deep Learning, Robot Operating System (ROS)</p>
+                </div>
+                <hr class="dashed_break"/>
+
+
+                <div class="row">
+                    <h3>Digital Video Streaming for Nano Quadcopters</h3>
+                    <div class="left_media_container" id="senior_project">
+                        <img src="images/senior_project.png" width=100%/>
+                        <img src="images/crazy_flie_stream.png" width=100%/>
+                    </div>
+
+                    <p>
+                    The objective of this project was to create a digital video streaming platform for consumer quadcopters to address the demand in consumer drone market. My team (two other engineers) and I designed a custom board with a <a href="https://www.ti.com/product/CC3220S#description" target="_blank">WiFi-enabled ARM MCU</a> and mobile phone camera for the <a href="https://www.bitcraze.io/products/crazyflie-2-1/" target="_blank">CrazyFlie</a> nano-quadcopter platform.
+                    </p>
+                    <p>
+                    My primary contributions were the design and firmware implementation of a UDP-based networking protocol for streaming compressed camera images, and a Java application (shown on the left) that receives and decompresses the images, and displays them to the user along with some other relevant metrics.
+                    </p>
+                    <p class=main_technologies>Main Technologies: Java, C, Embedded Systems, Networking, Image Compression</p>
+                </div>
+                <hr class="dashed_break"/>
+
+
+
+                <div class="row">
+                    <h3>Mapping Robot</h3>
+                    <div class="right_media_container">
+                        <div class="video_container">
+                            <iframe class="video" width=100% height=100% src="https://www.youtube.com/embed/mZK5LWIQbIY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>This robot maps out the floorplan of a room. It featured a custom designed and 3D printed LIDAR system, prototype hardware, and a python application to visualize LIDAR data.
+                    </p>
+                    In this video, you can see the floorplan of my apartment as the LIDAR sweeps around the room. The color of each point indicates the distance away from the sensor.
+                    </p>
+                    <p class=main_technologies>Main Technologies: C, Python, LIDAR, I2C, UART, Power Conversion, CAD</p>
+                </div>
+
+                <hr class="dashed_break" />
+
+                <div class="row">
+                    <h3>FIRST Robotics</h3>
+                    <div class="left_media_container" id="first_robotics">
+                        <img src="images/first.JPG" width=100%/>
+                    </div>
+
+                    <p>
+                    I was the cofounder of a <a href="https://www.firstinspires.org/" target="_blank">FIRST Robotics</a> team,
+                    competing in robotics competitions throughout California. We did technology outreach in our local community, documented our development process and experience in this <a href="http://ftc6077.blogspot.com/" target="_blank">blog</a>, and even made the <a href="https://www.independent.com/2012/11/23/local-team-wins-robotics-tournament/" target="_blank">news</a> a couple times.
+                    </p>
+                </div>
+
+            </div>
+
+            <hr/>
+
+            <h3>About This Site</h3>
+            <p>This static page was built from scratch with HTML and CSS (no templates or static site generators). My domain name was acquired through Google Domains, and the site is hosted on a DigitalOcean Droplet via Apache Web Server.</p>
+
+        </div>
+    </div>
+  </body>
+</html>
